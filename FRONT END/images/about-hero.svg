@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="700" height="500" rx="20" ry="20" fill="#e9ecef"/>
+    <text x="350" y="250" font-family="Arial" font-size="24" text-anchor="middle" fill="#6c757d">About Us Hero Image</text>
+    <g transform="translate(150, 150)">
+      <circle cx="0" cy="0" r="100" fill="#8e44ad" opacity="0.1"/>
+      <circle cx="200" cy="0" r="80" fill="#8e44ad" opacity="0.2"/>
+      <circle cx="400" cy="0" r="60" fill="#8e44ad" opacity="0.3"/>
+      <rect x="0" y="150" width="400" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="50" y="180" width="300" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="100" y="210" width="200" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+    </g>
+  </g>
+</svg> 

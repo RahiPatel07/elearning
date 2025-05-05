@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Progress | E-Learning Platform</title>
+    <meta name="description" content="Track your learning progress, view course completion, and unlock achievements">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modern.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/features/progress.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Sidebar navigation (placeholder - will be loaded dynamically) -->
+<div class="side-bar">
+    <div id="close-btn" class="close-side-bar">
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="profile">
+        <img src="../images/profile-placeholder.jpg" alt="User Profile">
+        <h3>User Name</h3>
+        <span>Student</span>
+    </div>
+    <nav class="navbar">
+        <a href="../../index.php"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="../../BACK END/about.php"><i class="fas fa-question"></i><span>About</span></a>
+        <a href="../../BACK END/courses.php"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+        <a href="../../BACK END/teachers.php"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+        <a href="/FRONT END/pages/progress.html" class="active"><i class="fas fa-chart-line"></i><span>Progress</span></a>
+        <a href="../../BACK END/contact.php"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+    </nav>
+</div>
+
+<!-- Main content area -->
+<section class="progress-tracker">
+    <div class="container">
+        <h1 class="heading animate-slide-up">Learning Progress Dashboard</h1>
+        
+        <!-- Filter controls -->
+        <div class="filter-controls animate-slide-up delay-200 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="filter-group">
+                    <label for="progress-filter">Filter by:</label>
+                    <select id="progress-filter" class="form-control">
+                        <option value="all">All Courses</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                        <option value="not-started">Not Started</option>
+                    </select>
+                </div>
+                <div class="date-range">
+                    <span class="text-light">Last updated: <span id="last-updated">Today, 3:45 PM</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Progress overview cards -->
+        <div class="progress-overview animate-slide-up delay-300">
+            <div class="progress-stat-card">
+                <i class="fas fa-check-circle"></i>
+                <h3 id="completed-courses">0</h3>
+                <p>Completed Courses</p>
+            </div>
+            
+            <div class="progress-stat-card">
+                <i class="fas fa-star"></i>
+                <h3 id="average-score">0%</h3>
+                <p>Average Quiz Score</p>
+            </div>
+            
+            <div class="progress-stat-card">
+                <i class="fas fa-clock"></i>
+                <h3 id="learning-time">0 min</h3>
+                <p>Learning Time</p>
+            </div>
+            
+            <div class="progress-stat-card">
+                <i class="fas fa-trophy"></i>
+                <h3 id="achievements-count">0</h3>
+                <p>Achievements Unlocked</p>
+            </div>
+        </div>
+        
+        <!-- Progress chart -->
+        <div class="card mb-5 animate-slide-up delay-400">
+            <div class="card-header">
+                <h3>Learning Activity</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="learningActivityChart" height="250"></canvas>
+            </div>
+        </div>
+        
+        <!-- Course progress section -->
+        <div class="section-header d-flex justify-content-between align-items-center mb-4 animate-slide-up delay-500">
+            <h2>Course Progress</h2>
+            <a href="../../BACK END/courses.php" class="btn btn-outline-primary btn-sm">Browse Courses</a>
+        </div>
+        
+        <div class="course-progress-list animate-slide-up delay-600">
+            <!-- Course progress cards will be dynamically inserted here -->
+            <div class="course-progress-card">
+                <div class="course-progress-header">
+                    <h3 class="course-progress-title">Web Development Fundamentals</h3>
+                    <span class="course-progress-percentage">65%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" data-width="65" style="width: 0%"></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="text-light"><i class="fas fa-clock"></i> Last accessed: Feb 15, 2023</span>
+                    <a href="#" class="btn btn-primary btn-sm">Continue</a>
+                </div>
+            </div>
+            
+            <div class="course-progress-card">
+                <div class="course-progress-header">
+                    <h3 class="course-progress-title">Introduction to JavaScript</h3>
+                    <span class="course-progress-percentage">100%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" data-width="100" style="width: 0%"></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="text-light"><i class="fas fa-clock"></i> Last accessed: Mar 2, 2023</span>
+                    <a href="#" class="btn btn-primary btn-sm">Review</a>
+                </div>
+            </div>
+            
+            <div class="course-progress-card">
+                <div class="course-progress-header">
+                    <h3 class="course-progress-title">UI/UX Design Principles</h3>
+                    <span class="course-progress-percentage">25%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" data-width="25" style="width: 0%"></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="text-light"><i class="fas fa-clock"></i> Last accessed: Mar 10, 2023</span>
+                    <a href="#" class="btn btn-primary btn-sm">Continue</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Achievements section -->
+        <div class="section-header mb-4 mt-5 animate-slide-up delay-700">
+            <h2>Your Achievements</h2>
+            <p class="text-light">Complete courses and learning milestones to unlock achievements</p>
+        </div>
+        
+        <div class="achievements-grid animate-slide-up delay-800">
+            <!-- Unlocked achievements -->
+            <div class="achievement-badge unlocked">
+                <i class="fas fa-award"></i>
+                <h3>First Steps</h3>
+                <p>Complete your first course</p>
+                <div class="achievement-date text-light mt-2">Earned: Feb 10, 2023</div>
+            </div>
+            
+            <div class="achievement-badge unlocked">
+                <i class="fas fa-fire"></i>
+                <h3>Fast Learner</h3>
+                <p>Complete a course in less than a week</p>
+                <div class="achievement-date text-light mt-2">Earned: Mar 5, 2023</div>
+            </div>
+            
+            <!-- Locked achievements -->
+            <div class="achievement-badge locked">
+                <i class="fas fa-book"></i>
+                <h3>Knowledge Seeker</h3>
+                <p>Complete the required criteria to unlock this achievement</p>
+            </div>
+            
+            <div class="achievement-badge locked">
+                <i class="fas fa-trophy"></i>
+                <h3>Master Student</h3>
+                <p>Complete the required criteria to unlock this achievement</p>
+            </div>
+        </div>
+        
+        <!-- Recommended next steps -->
+        <div class="card mt-5 animate-slide-up delay-900">
+            <div class="card-header">
+                <h3>Recommended Next Steps</h3>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-wrap">
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="recommendation-item d-flex">
+                            <div class="recommendation-icon mr-3">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div class="recommendation-content">
+                                <h4>Complete UI/UX Course</h4>
+                                <p class="text-light">You're 75% away from finishing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="recommendation-item d-flex">
+                            <div class="recommendation-icon mr-3">
+                                <i class="fas fa-certificate text-primary"></i>
+                            </div>
+                            <div class="recommendation-content">
+                                <h4>Take Final Quiz</h4>
+                                <p class="text-light">JavaScript course quiz is pending</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="recommendation-item d-flex">
+                            <div class="recommendation-icon mr-3">
+                                <i class="fas fa-book-open text-primary"></i>
+                            </div>
+                            <div class="recommendation-content">
+                                <h4>Explore New Courses</h4>
+                                <p class="text-light">Find courses that match your interests</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Responsive menu toggle -->
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<!-- Custom JS -->
+<script src="../js/modern.js"></script>
+<script src="../js/features/progress.js"></script>
+<script>
+    // Initialize charts when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize learning activity chart
+        const activityCtx = document.getElementById('learningActivityChart').getContext('2d');
+        
+        const activityChart = new Chart(activityCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Learning Hours',
+                    data: [2, 5, 7, 4, 8, 12, 9],
+                    borderColor: '#8e44ad',
+                    backgroundColor: 'rgba(142, 68, 173, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        titleFont: {
+                            size: 14
+                        },
+                        bodyFont: {
+                            size: 13
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Initialize progress bars animation
+        initProgressBars();
+        
+        // Update achievement count
+        document.getElementById('achievements-count').textContent = 
+            document.querySelectorAll('.achievement-badge.unlocked').length;
+    });
+    
+    // Progress bar animation
+    function initProgressBars() {
+        const progressBars = document.querySelectorAll('.progress-bar');
+        
+        progressBars.forEach(bar => {
+            const targetWidth = bar.getAttribute('data-width');
+            setTimeout(() => {
+                bar.style.width = targetWidth + '%';
+            }, 500);
+        });
+    }
+</script>
+</body>
+</html> 

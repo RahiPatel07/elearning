@@ -4,48 +4,38 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>E-Learning Platform</title>
 
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/animations.css">
+
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-<header class="header">
-   
-   <section class="flex">
-
-      <a href="home.html" class="logo">Educa.</a>
-
-      <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
-      </form>
-
-      <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
+<header class="header fade-in">
+   <nav class="navbar">
+      <div class="logo">
+         <h1>E-Learning</h1>
       </div>
-
-      <div class="profile">
-         <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">shaikh anas</h3>
-         <p class="role">studen</p>
-         <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.html" class="option-btn">login</a>
-            <a href="register.html" class="option-btn">register</a>
-         </div>
+      <ul class="nav-links">
+         <li><a href="#" class="nav-link">Home</a></li>
+         <li><a href="#" class="nav-link">Courses</a></li>
+         <li><a href="#" class="nav-link">Teachers</a></li>
+         <li><a href="#" class="nav-link">About</a></li>
+         <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+         <a href="login.html" class="btn btn-outline">Login</a>
+         <a href="register.html" class="btn btn-primary">Register</a>
       </div>
-
-   </section>
-
+   </nav>
 </header>   
 
 <div class="side-bar">
@@ -123,7 +113,58 @@
 
 </section>
 
+<section class="hero fade-in">
+   <div class="hero-content">
+      <h1>Learn Anything, Anytime, Anywhere</h1>
+      <p>Discover thousands of courses taught by industry experts</p>
+      <div class="search-bar-container">
+         <input type="text" class="search-bar" placeholder="Search for courses...">
+         <button class="btn btn-primary">Search</button>
+      </div>
+   </div>
+</section>
 
+<section class="featured-courses fade-in">
+   <h2>Featured Courses</h2>
+   <div class="course-grid">
+      <div class="course-card">
+         <div class="course-image">
+            <img src="images/course1.jpg" alt="Course 1">
+         </div>
+         <div class="course-content">
+            <h3>Web Development</h3>
+            <p>Learn modern web development with HTML, CSS, and JavaScript</p>
+            <div class="course-meta">
+               <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+               <span class="duration"><i class="fas fa-clock"></i> 30 hours</span>
+            </div>
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+         </div>
+      </div>
+      <!-- Add more course cards here -->
+   </div>
+</section>
+
+<section class="why-choose-us fade-in">
+   <h2>Why Choose Us</h2>
+   <div class="features-grid">
+      <div class="feature-card">
+         <i class="fas fa-graduation-cap"></i>
+         <h3>Expert Instructors</h3>
+         <p>Learn from industry professionals with years of experience</p>
+      </div>
+      <div class="feature-card">
+         <i class="fas fa-laptop-code"></i>
+         <h3>Hands-on Learning</h3>
+         <p>Practical projects and real-world applications</p>
+      </div>
+      <div class="feature-card">
+         <i class="fas fa-certificate"></i>
+         <h3>Certification</h3>
+         <p>Get recognized certificates upon completion</p>
+      </div>
+   </div>
+</section>
 
 <section class="courses">
 
@@ -235,29 +276,35 @@
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer">
-
-   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
-
+<footer class="footer fade-in">
+   <div class="footer-content">
+      <div class="footer-section">
+         <h3>About Us</h3>
+         <p>Your premier destination for online learning</p>
+      </div>
+      <div class="footer-section">
+         <h3>Quick Links</h3>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Teachers</a></li>
+            <li><a href="#">About</a></li>
+         </ul>
+      </div>
+      <div class="footer-section">
+         <h3>Contact Us</h3>
+         <p>Email: info@elearning.com</p>
+         <p>Phone: +1 234 567 890</p>
+      </div>
+   </div>
+   <div class="footer-bottom">
+      <p>&copy; 2024 E-Learning Platform. All rights reserved.</p>
+   </div>
 </footer>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/animations.js"></script>
 
-   
 </body>
 </html>

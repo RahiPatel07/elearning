@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="700" height="500" rx="20" ry="20" fill="#e9ecef"/>
+    <text x="350" y="250" font-family="Arial" font-size="24" text-anchor="middle" fill="#6c757d">Courses Banner Image</text>
+    <g transform="translate(100, 100)">
+      <!-- Book Icon -->
+      <rect x="50" y="50" width="150" height="200" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="70" y="70" width="110" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.4"/>
+      <rect x="70" y="90" width="110" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.4"/>
+      <rect x="70" y="110" width="110" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.4"/>
+      <rect x="70" y="130" width="110" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.4"/>
+      <rect x="70" y="150" width="80" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.4"/>
+      
+      <!-- Computer Icon -->
+      <rect x="300" y="70" width="200" height="150" rx="5" ry="5" fill="#8e44ad" opacity="0.3"/>
+      <rect x="300" y="220" width="200" height="20" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="370" y="240" width="60" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="320" y="90" width="160" height="110" rx="5" ry="5" fill="#f8f9fa"/>
+      <rect x="340" y="110" width="120" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="340" y="130" width="120" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+      <rect x="340" y="150" width="80" height="10" rx="5" ry="5" fill="#8e44ad" opacity="0.2"/>
+    </g>
+  </g>
+</svg> 

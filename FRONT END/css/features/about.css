@@ -1,0 +1,253 @@
+/* About Page Styling */
+
+/* About Hero Section */
+.about-hero {
+    padding: 7rem 0;
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(142, 68, 173, 0.05);
+    z-index: 0;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(142, 68, 173, 0.07);
+    z-index: 0;
+}
+
+.about-hero img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Features Section */
+.feature-card {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    margin-bottom: 2rem;
+}
+
+.feature-card h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1.5rem;
+    color: var(--gray-600);
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 7rem 0;
+    background-color: var(--light-bg);
+}
+
+.mission-section img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.mission-points {
+    margin-top: 3rem;
+}
+
+.mission-point {
+    margin-bottom: 2.5rem;
+}
+
+.mission-point-icon {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.mission-point h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--gray-800);
+}
+
+.mission-point p {
+    font-size: 1.5rem;
+    color: var(--gray-600);
+    margin: 0;
+}
+
+/* Testimonials Section */
+.testimonial-card {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-quote {
+    color: var(--primary);
+}
+
+.testimonial-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    font-style: italic;
+}
+
+.testimonial-avatar img {
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-info h4 {
+    font-size: 1.6rem;
+    color: var(--gray-800);
+}
+
+.stars {
+    color: var(--warning);
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+.team-card {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.team-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--gray-800);
+}
+
+.team-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--light-bg);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.team-social a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .about-hero,
+    .mission-section {
+        padding: 5rem 0;
+    }
+    
+    .about-hero img,
+    .mission-section img {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-card,
+    .testimonial-card,
+    .team-card {
+        margin-bottom: 2rem;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .feature-card,
+    .testimonial-card,
+    .team-card {
+        background-color: var(--gray-800);
+    }
+    
+    .feature-card p {
+        color: var(--gray-400);
+    }
+    
+    .mission-point h4 {
+        color: var(--gray-300);
+    }
+    
+    .mission-point p {
+        color: var(--gray-400);
+    }
+    
+    .testimonial-text {
+        color: var(--gray-300);
+    }
+    
+    .testimonial-info h4 {
+        color: var(--gray-200);
+    }
+    
+    .team-card h4 {
+        color: var(--gray-200);
+    }
+    
+    .team-social a {
+        background-color: var(--gray-700);
+    }
+} 

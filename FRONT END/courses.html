@@ -12,6 +12,19 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
+   <style>
+      body { background: #f5f7fa; font-family: 'Segoe UI', Arial, sans-serif; }
+      .category-bar { display: flex; gap: 1rem; margin: 2rem 0; justify-content: center; }
+      .category-bar button { background: #fff; border: 2px solid #007bff; color: #007bff; padding: 1rem 2rem; border-radius: 12px; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; }
+      .category-bar button.active, .category-bar button:hover { background: #007bff; color: #fff; }
+      .courses-grid, .videos-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
+      .course-card, .video-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 300px; padding: 1.5rem; text-align: center; transition: box-shadow 0.2s; cursor: pointer; }
+      .course-card img, .video-card img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+      .course-card h3, .video-card h3 { margin: 0.5rem 0; font-size: 1.2rem; }
+      .course-card p, .video-card p { color: #555; font-size: 1rem; }
+      .video-embed { width: 100%; height: 315px; margin-bottom: 1rem; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
+   </style>
+
 </head>
 <body>
 
@@ -73,179 +86,89 @@
 
 <section class="courses">
 
-   <h1 class="heading">our courses</h1>
+   <h1 class="heading">Our Courses</h1>
 
-   <div class="box-container">
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-2.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-1.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete HTML tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-3.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-2.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete CSS tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-4.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-3.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete JS tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-5.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-4.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete Boostrap tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-6.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-5.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete JQuery tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-7.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-6.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete SASS tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-8.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-7.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete PHP tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-9.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-8.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete MySQL tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-1.jpg" alt="">
-            <div class="info">
-               <h3>john deo</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-9.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">complete react tutorial</h3>
-         <a href="playlist.html" class="inline-btn">view playlist</a>
-      </div>
-
+   <div id="categories" class="category-bar">
+      <button data-category="Development">Development</button>
+      <button data-category="Business">Business</button>
+      <button data-category="Design">Design</button>
+      <button data-category="Marketing">Marketing</button>
+      <button data-category="Music">Music</button>
+      <button data-category="Photography">Photography</button>
    </div>
+
+   <div id="playlists-container" class="courses-grid"></div>
+   <div id="videos-container" class="videos-grid"></div>
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="footer">
-
-   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
 
 </footer>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<script>
+function getYouTubeEmbedUrl(url) {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]{11})/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : '';
+}
+function loadPlaylists(category) {
+  document.getElementById('videos-container').innerHTML = '';
+  fetch(`../BACK END/api/get_playlists_by_category.php?category=${encodeURIComponent(category)}`)
+    .then(res => res.json())
+    .then(playlists => {
+      const container = document.getElementById('playlists-container');
+      container.innerHTML = '';
+      if (playlists.length === 0) {
+        container.innerHTML = '<p>No playlists found for this category.</p>';
+      } else {
+        playlists.forEach(playlist => {
+          container.innerHTML += `
+            <div class="course-card" onclick="loadVideos('${playlist.id}')">
+              <img src="../BACK END/IMAGES/${playlist.thumb}" alt="${playlist.title}">
+              <h3>${playlist.title}</h3>
+              <p>${playlist.description}</p>
+            </div>
+          `;
+        });
+      }
+    });
+}
+function loadVideos(playlistId) {
+  fetch(`../BACK END/api/get_videos_by_playlist.php?playlist_id=${encodeURIComponent(playlistId)}`)
+    .then(res => res.json())
+    .then(videos => {
+      const container = document.getElementById('videos-container');
+      container.innerHTML = '';
+      if (videos.length === 0) {
+        container.innerHTML = '<p>No videos found for this playlist.</p>';
+      } else {
+        videos.forEach(video => {
+          const embedUrl = getYouTubeEmbedUrl(video.video);
+          container.innerHTML += `
+            <div class="video-card">
+              <div class="video-embed">
+                <iframe width="100%" height="100%" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <h3>${video.title}</h3>
+              <p>${video.description}</p>
+            </div>
+          `;
+        });
+      }
+    });
+}
+document.querySelectorAll('#categories button').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('#categories button').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    loadPlaylists(this.getAttribute('data-category'));
+  });
+});
+document.querySelector('#categories button').click();
+</script>
 
    
 </body>

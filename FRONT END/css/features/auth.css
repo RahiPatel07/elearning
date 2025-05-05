@@ -1,0 +1,156 @@
+/* Authentication Pages Styling */
+
+.auth-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+/* Card styling */
+.auth-section .card {
+    border: none;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.auth-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Form styling */
+.login-form .form-group,
+.register-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.input-group-text {
+    background-color: var(--light);
+    border: 1px solid var(--gray-300);
+    color: var(--gray-600);
+}
+
+.form-control {
+    border: 1px solid var(--gray-300);
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25);
+}
+
+.custom-file-input {
+    cursor: pointer;
+}
+
+.custom-file-label {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-file-input:focus ~ .custom-file-label {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25);
+}
+
+/* Alerts */
+.alert {
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--danger);
+    color: var(--danger);
+}
+
+.form-check {
+    padding-left: 2rem;
+}
+
+.form-check-input {
+    margin-top: 0.3rem;
+    margin-left: -2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.form-check-label {
+    font-size: 1.4rem;
+    color: var(--gray-700);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .auth-section {
+        padding: 3rem 0;
+    }
+    
+    .auth-section .card {
+        margin: 0 1.5rem;
+    }
+    
+    .form-control, 
+    .custom-file-label {
+        font-size: 1.6rem;
+        padding: 1.2rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .auth-section .card {
+        background-color: var(--gray-800);
+        color: var(--white);
+    }
+    
+    .form-label,
+    .form-check-label {
+        color: var(--gray-300);
+    }
+    
+    .input-group-text {
+        background-color: var(--gray-700);
+        border-color: var(--gray-600);
+        color: var(--gray-300);
+    }
+    
+    .form-control {
+        background-color: var(--gray-700);
+        border-color: var(--gray-600);
+        color: var(--white);
+    }
+    
+    .form-control:focus {
+        background-color: var(--gray-700);
+        color: var(--white);
+    }
+    
+    .custom-file-label {
+        background-color: var(--gray-700);
+        border-color: var(--gray-600);
+        color: var(--gray-300);
+    }
+    
+    .alert-danger {
+        background-color: rgba(231, 76, 60, 0.2);
+        color: #f8d7da;
+    }
+} 

@@ -1,0 +1,218 @@
+/* Progress Overview Section */
+.progress-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.progress-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.progress-stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.progress-stat-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.progress-stat-card h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.progress-stat-card p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+/* Course Progress List */
+.course-progress-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-progress-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.course-progress-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.course-progress-percentage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.progress {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.achievement-badge {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-badge:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-badge i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.achievement-badge h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-badge p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-badge.locked {
+    opacity: 0.6;
+}
+
+.achievement-badge.locked i {
+    color: var(--light-color);
+}
+
+.achievement-date {
+    font-size: 0.8rem;
+}
+
+/* Section Headers */
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-progress-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .course-progress-percentage {
+        font-size: 1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .progress-stat-card,
+    .course-progress-card,
+    .achievement-badge,
+    .card,
+    .card-header,
+    .card-body {
+        background: #232946 !important;
+        color: #fff !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .heading,
+    .card-header h3,
+    .section-header h2 {
+        color: #fff !important;
+    }
+    .progress-tracker,
+    body {
+        background: #10182F !important;
+    }
+    .btn,
+    .btn-outline-primary {
+        color: #fff !important;
+        border-color: #4361ee !important;
+        background: #4361ee !important;
+    }
+    .btn-outline-primary:hover {
+        background: #3550b6 !important;
+        border-color: #3550b6 !important;
+    }
+    .progress {
+        background: #1a1a1a !important;
+    }
+    .course-progress-title,
+    .course-progress-percentage,
+    .achievement-badge h3,
+    .achievement-badge p,
+    .achievement-date,
+    .progress-stat-card p {
+        color: #e0e0e0 !important;
+    }
+    .text-light {
+        color: #bfc9e0 !important;
+    }
+} 
